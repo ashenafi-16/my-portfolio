@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { GraduationCap, Award, Calendar, Download } from "lucide-react"
+import { GraduationCap, Award, Calendar } from "lucide-react"
 
 export default function Education() {
   const education = [
@@ -56,16 +56,6 @@ export default function Education() {
           <p className="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto text-sm sm:text-base">
             Academic background and professional certifications
           </p>
-
-          {/* ✅ Download PDF Button */}
-          <a
-            href="/Ashenafi-Mulugeta.pdf"
-            download
-            className="inline-flex items-center gap-2 px-4 py-2 mt-4 bg-blue-600 text-white rounded-lg text-sm hover:bg-blue-700 transition"
-          >
-            <Download className="h-4 w-4" />
-            Download Resume (PDF)
-          </a>
         </motion.div>
 
         <div className="max-w-7xl mx-auto">

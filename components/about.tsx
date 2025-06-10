@@ -3,103 +3,8 @@
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Download, MapPin, Mail, Phone, User } from "lucide-react"
-import jsPDF from "jspdf"
 
 export default function About() {
-  const handleDownloadResume = () => {
-    // Create a new PDF document
-    const pdf = new jsPDF()
-
-    // Set font to a standard font
-    pdf.setFont("helvetica")
-    pdf.setFontSize(12)
-
-    // The exact resume content as provided by the user
-    const resumeContent = `ASEHNAFI MULUGETA 
-Ethiopia | Addis Ababa, Ethiopia | +251942233079 
-ashumulugeta016@gmail.com | LinkedIn ashenafi-mulugeta-08a0672a6 
- 
-SUMMARY 
-I am a third-year Software Engineering student at Addis Ababa Science and Technology University with strong backend 
-development skills and hands-on experience in building real-world applications. 
- 
-EDUCATION 
-Addis ababa science and technology university  February 2023 – June 2027 
-● Degree: Bachelor of Science in Software Engineering (In Progress) 
-● Field of Study: Software Engineering 
- 
-CERTIFICATIONS & TRAINING 
-African Leadership X(ALX)                                                                                                                 June 2024 - December 2024  
-● Course: Backend Development. 
-● Completed a full backend curriculum covering Python, Django, APIs, authentication, and system design. 
- 
-GDG AASTU Backend Development Certification December 2024 - June 2025 
-● Recognized for backend development excellence by Google Developer Group – AASTU. 
-● Actively collaborated in a real-time capstone project, applying Django best practices to solve real-world problems. 
-● Maintained perfect attendance and consistently delivered quality code in a team setting, demonstrating strong 
-commitment, communication, and engineering discipline. 
- 
-A2SV (Africa to Silicon Valley) – In Progress 
-● Participating in an advanced training program focused on Data Structures and Algorithms. 
-● Actively solving complex problems on Codeforces and LeetCode. 
-● Solved over 700 problems. 
- 
-PROJECTS                                                                                                                            
-Task Management API 
-● Developed a RESTful API for task and category management using Django REST Framework. 
-● Implemented secure token-based user authentication (login, logout, registration) and built endpoints for managing 
-tasks and categories (CRUD operations). 
-● Created a notification system for task events and added activity logging to track user actions. 
- 
-Inventory Management System 
-● Developed a retail inventory system using Python (OOP) and MySQL to manage products, suppliers, and sales. 
-Implemented stock tracking, low-stock alerts, and demand forecasting with report generation. 
- 
-Study Buddy (Team Project) 
-● Developed real-time chat, Pomodoro timers, and progress tracking features. 
-● Used React.js and Tailwind CSS for the frontend, Django and PostgreSQL on the backend. 
-● Implemented secure authentication with Django Allauth and JWT. 
-Travel Habesha (Team Project) 
-● Collaborated in a cross-functional team to build and test features using php and modern web tools. 
-● Contributed to a travel planning web app providing booking and itinerary features. 
- 
-ADDITIONAL iNFORMATION 
-  
-  
-● Technical skills: Python, Java, C++, JavaScript 
-● Web & Backend: HTML, CSS, Django, REST APIs, MySQL, React 
-● Social Skills: Teamwork, Problem-Solving 
-● Languages: Amharic -  (Native), English – (Proficient)`
-
-    // Split the content into lines
-    const lines = resumeContent.split("\n")
-
-    // Set initial position
-    let y = 20
-    const lineHeight = 7
-    const margin = 20
-    const pageWidth = 210
-    const textWidth = pageWidth - margin * 2
-
-    // Process each line
-    for (let i = 0; i < lines.length; i++) {
-      const line = lines[i]
-
-      // Check if we need a new page
-      if (y > 280) {
-        pdf.addPage()
-        y = 20
-      }
-
-      // Add the line to the PDF
-      pdf.text(line, margin, y)
-      y += lineHeight
-    }
-
-    // Save the PDF
-    pdf.save("Asehnafi_Mulugeta_Resume.pdf")
-  }
-
   return (
     <section id="about" className="py-12 sm:py-16 lg:py-20 bg-white dark:bg-slate-900">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -121,6 +26,16 @@ ADDITIONAL iNFORMATION
             sharpening my problem-solving skills with A2SV, having solved over 700 algorithmic challenges. I'm
             passionate about clean code, teamwork, and building tech solutions that make an impact.
           </p>
+          
+          {/* Download Resume Button */}
+          <div className="mt-8">
+            <a href="/Ashenafi-Mulugeta.pdf" download>
+              <Button className="gap-2 bg-blue-600 hover:bg-blue-700 text-white shadow-lg hover:shadow-xl transition-all duration-200 px-6 py-3 text-base">
+                <Download className="h-5 w-5" />
+                Download Resume
+              </Button>
+            </a>
+          </div>
         </motion.div>
 
         <div className="max-w-6xl mx-auto">
@@ -161,16 +76,6 @@ ADDITIONAL iNFORMATION
                     </p>
                   </div>
                 </div>
-              </div>
-
-              <div className="text-center xl:text-left">
-                <Button
-                  onClick={handleDownloadResume}
-                  className="gap-2 bg-blue-600 hover:bg-blue-700 text-white shadow-lg hover:shadow-xl transition-all duration-200 w-full sm:w-auto"
-                >
-                  <Download className="h-4 w-4" />
-                  Download Resume
-                </Button>
               </div>
             </div>
 

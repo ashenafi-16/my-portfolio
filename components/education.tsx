@@ -8,34 +8,23 @@ export default function Education() {
     {
       institution: "Addis Ababa Science and Technology University",
       degree: "Bachelor of Science in Software Engineering",
-      period: "February 2023 – June 2027",
-      status: "In Progress",
-      description:
-        "Currently in third year, focusing on software engineering principles and real-world application development.",
+      period: "September 2020 – August 2025",
+      description: "Relevant coursework: Distributed Systems, Machine Learning, Programming, Networking, Operating Systems, Data Structures & Algorithms, Object-Oriented Programming, System Design & Analysis, Database Systems.",
     },
   ]
 
   const certifications = [
     {
-      organization: "African Leadership (ALX)",
+      organization: "African Leadership X (ALX)",
       title: "Backend Development",
-      period: "June 2024 - December 2024",
-      description:
-        "Completed a full backend curriculum covering Python, Django, APIs, authentication, and system design.",
+      period: "June 2024 – October 2025",
+      description: "Intensive Backend Development Curriculum focused on mastering Python and Django, complemented by in-depth system design principles. Advanced studies include containerization with Docker, orchestration using Kubernetes, and sophisticated database optimization techniques for high performance.",
     },
     {
-      organization: "GDG AASTU",
-      title: "Backend Development Certification",
-      period: "December 2024 - June 2025",
-      description:
-        "Recognized for backend development excellence by Google Developer Group – AASTU. Actively collaborated in a real-time capstone project, applying Django best practices with perfect attendance and quality code delivery.",
-    },
-    {
-      organization: "A2SV (Africa to Silicon Valley)",
+      organization: "Africa to Silicon Valley (A2SV)",
       title: "Data Structures and Algorithms",
-      period: "In Progress",
-      description:
-        "Participating in advanced training program focused on Data Structures and Algorithms. Actively solving complex problems on Codeforces and LeetCode with over 700 problems solved.",
+      period: "March 2023 – March 2025",
+      description: "Successfully completed a rigorous 30+ hours per week curriculum focused on DSA. Mastered advanced concepts through weekly lectures, contests, mock interviews, and pair programming. Solved 700+ Codeforces & LeetCode algorithmic problems.",
     },
   ]
 
@@ -86,9 +75,6 @@ export default function Education() {
                         {edu.institution}
                       </p>
                     </div>
-                    <span className="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300 text-xs sm:text-sm rounded-full flex-shrink-0 self-start">
-                      {edu.status}
-                    </span>
                   </div>
                   <div className="flex items-center gap-2 text-slate-600 dark:text-slate-400 mb-3">
                     <Calendar className="h-4 w-4 flex-shrink-0" />
@@ -111,7 +97,7 @@ export default function Education() {
               <Award className="h-5 w-5 sm:h-6 sm:w-6 text-blue-600" />
               Certifications & Training
             </h3>
-            <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
               {certifications.map((cert, index) => (
                 <div
                   key={index}

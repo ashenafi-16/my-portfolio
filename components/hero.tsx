@@ -23,11 +23,17 @@ export default function Hero() {
       className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-950 dark:to-slate-900"
       ref={scrollRef}
     >
+      {/* Background for dark mode */}
       <div className="dark:block hidden">
         <SpaceBackground />
       </div>
+
+      {/* Navigation Header */}
       <Header />
+
       <div className="container mx-auto px-4 pt-16 flex flex-col items-center text-center z-10">
+        
+        {/* Welcome badge */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -38,6 +44,8 @@ export default function Hero() {
             Welcome to my portfolio
           </div>
         </motion.div>
+
+        {/* Name */}
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -46,16 +54,20 @@ export default function Hero() {
         >
           <span className="text-blue-600 dark:text-blue-400">Ashenafi Mulugeta</span>
         </motion.h1>
+
+        {/* Subtitle / Description */}
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.4 }}
           className="text-xl md:text-2xl text-slate-600 dark:text-slate-300 max-w-2xl mb-8 leading-relaxed"
         >
-          A passionate <span className="text-slate-800 dark:text-slate-200 font-semibold">Backend Developer</span> and
-          Software Engineering student building scalable solutions
+          A <span className="text-slate-800 dark:text-slate-200 font-semibold">Full-Stack Developer </span> 
+          and Software Engineering student focused on building scalable, secure, and high-performance 
+          applications.
         </motion.p>
 
+        {/* Scroll Down Button */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -72,6 +84,7 @@ export default function Hero() {
             <ArrowDown className="h-5 w-5" />
           </Button>
         </motion.div>
+
       </div>
     </section>
   )

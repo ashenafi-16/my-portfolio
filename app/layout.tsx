@@ -11,10 +11,10 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <title>Asehnafi Mulugeta - Backend Developer</title>
+        <title>Ashenafi Mulugeta - Backend Developer</title>
         <meta
           name="description"
-          content="Asehnafi Mulugeta's portfolio - Backend Developer & Software Engineering Student"
+          content="Ashenafi Mulugeta's portfolio - Backend Developer & Software Engineering Student"
         />
       </head>
       <body>

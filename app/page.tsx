@@ -8,8 +8,8 @@ import Footer from "@/components/footer"
 import Education from "@/components/education"
 
 export const metadata: Metadata = {
-  title: "Asehnafi Mulugeta - Backend Developer",
-  description: "Asehnafi Mulugeta's portfolio - Backend Developer & Software Engineering Student",
+  title: "Ashenafi Mulugeta - Backend Developer",
+  description: "Ashenafi Mulugeta's portfolio - Backend Developer & Software Engineering Student",
   generator: "v0.dev",
 }
 
